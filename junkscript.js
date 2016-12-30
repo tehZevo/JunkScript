@@ -1,6 +1,7 @@
 var Runner = require("./lib/runner.js");
+var Utils = require("./lib/utils.js");
 
-var instructionSets = ["core", "constants", "stack", "array", "math"];
+var instructionSets = ["core", "constants", "stack", "array", "math", "io", "macros"];
 
 var instructions = {};
 
@@ -17,3 +18,7 @@ var program = process.argv[2];
 new Runner(instructions, program, stack, false).run();
 
 console.log(stack);
+
+//console.log(Object.keys(instructions).sort().join(""));
+
+//console.log(Utils.findMatching("{}}}}", "{", "}", "{", "}"));
