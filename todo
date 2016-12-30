@@ -1,0 +1,16 @@
+≈ -> round
+∩ -> intersection
+« -> for number $1: bitshift left $2 times, for array/string $1: shift elements/characters left $2 times
+» -> same as above except shift right
+
+⌐ -> alt 169: (invert?)
+¬ (not)
+
+split into two?
+
+needs end execution
+
+
+take entire heap and store in object on stack :)
+clear heap
+clear stack (last $1 elements?)
