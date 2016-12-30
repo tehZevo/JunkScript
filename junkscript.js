@@ -1,13 +1,19 @@
 var Runner = require("./lib/runner.js");
-var core = require("./lib/instructions/core.js");
+
+var instructionSets = ["core", "constants", "stack", "array", "math"];
 
 var instructions = {};
 
-Object.assign(instructions, core);
+for(var i = 0; i < instructionSets.length; i++)
+{
+  var is = instructionSets[i];
+
+  Object.assign(instructions, require("./lib/instructions/" + is + ".js"));
+}
 
 var stack = [];
 var program = process.argv[2];
 
-new Runner(instructions, program, stack, true).run();
+new Runner(instructions, program, stack, false).run();
 
 console.log(stack);
